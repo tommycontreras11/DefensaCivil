@@ -14,6 +14,8 @@ export class AppComponent {
     { title: 'Albergues', url: '/albergues', icon: 'document-text' },
     { title: 'Inicio de Sesión', url: '/login', icon: 'enter' },
     { title: 'Registrarse', url: '/registrarse', icon: 'person-add' },
+    { title: 'Recuperar Clave', url: '/recuperar-clave', icon: 'key' },
+    { title: 'Acerca de', url: '/acerca-de', icon: 'bulb' },
   ];
   //public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}

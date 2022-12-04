@@ -15,14 +15,14 @@ export class AlberguesPage implements OnInit {
   constructor(public http: HttpClient) { }
 
   ngOnInit() {
-    this.albergues();
+    this.listarAlbergues();
   }
 
   setOpen(isOpen: boolean) {
     this.isModalOpen = isOpen;
   }
 
-  albergues(){
+  listarAlbergues(){
     this.http.get("https://adamix.net/defensa_civil/def/albergues.php").subscribe((data:any) => {
       for(let i = 0; i < data.datos.length; i++){
         this.albergue.push({
@@ -39,7 +39,7 @@ export class AlberguesPage implements OnInit {
     });
   }
 
-  Details(id:any){
+  verDetalles(id:any){
     this.albergueDetalles.splice(0, this.albergueDetalles.length);
     this.http.get("https://adamix.net/defensa_civil/def/albergues.php").subscribe((data:any) => {
       for(let i = 0; i < data.datos.length; i++){

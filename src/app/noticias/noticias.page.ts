@@ -15,14 +15,14 @@ export class NoticiasPage implements OnInit {
   isModalOpen = false;
 
   ngOnInit() {
-    this.getData();
+    this.listarNoticias();
   }
 
   setOpen(isOpen: boolean) {
     this.isModalOpen = isOpen;
   }
 
-  getData(){
+  listarNoticias(){
     this.http.get("https://adamix.net/defensa_civil/def/noticias.php").subscribe((data:any) => {
       for(let i = 0; i < data.datos.length; i++){
         this.noticia.push({
@@ -36,7 +36,7 @@ export class NoticiasPage implements OnInit {
     })
   }
 
-  Details(id:any){
+  verDetalles(id:any){
     this.noticiaDetalles.splice(0, this.noticiaDetalles.length)
     this.http.get("https://adamix.net/defensa_civil/def/noticias.php").subscribe((data:any) => {
       for(let i = 0; i < data.datos.length; i++){

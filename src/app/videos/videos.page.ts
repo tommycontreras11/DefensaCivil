@@ -14,10 +14,10 @@ export class VideosPage implements OnInit {
   constructor(public http: HttpClient, private dom: DomSanitizer) { }
 
   ngOnInit() {
-    this.videos();
+    this.listarVideos();
   }
 
-  videos(){
+  listarVideos(){
     this.http.get("https://adamix.net/defensa_civil/def/videos.php").subscribe((data:any) => {
       for(let i = 0; i < data.datos.length; i++){
         console.log(data["datos"][i]["titulo"]);

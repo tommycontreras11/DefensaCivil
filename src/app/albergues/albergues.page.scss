@@ -15,13 +15,14 @@ ion-modal ion-toolbar {
 ion-icon {
     width: 30px;
     height: 30px;
-}
-
-ion-content{
-    width: 100%;
+    color: rgb(56, 128, 255);
 }
 
 ion-card {
     margin: auto;
     width: 100%;
+}
+
+ion-card-title {
+    font-size: 24px;
 }

@@ -1,7 +1,12 @@
-ion-button{
+ion-item {
+    margin-bottom: 10px;
     --ion-color-primary: #2665AA;
 }
 
-ion-item {
-    --ion-color-success: #2665AA;
+ion-button{
+    --ion-color-primary: #2665AA;
+    width: 140px;
+    height: 40px;
+    font-size: 14px;
+    text-transform: none;
 }

@@ -16,33 +16,18 @@
 
 <ion-content>
   <div id="container">
-    <ion-card *ngFor="let item of noticia" id="{{item.id}}" style="height: 360px;">
+    <ion-card *ngFor="let item of noticia" id="{{item.id}}">
       <img alt="Silhouette of mountains" src="{{item.foto}}" />
       <ion-card-header>
-        <ion-card-title style="text-align: justify; font-size: 20px;">{{item.titulo}}</ion-card-title>
+        <ion-card-title>{{item.titulo}}</ion-card-title>
         <ion-card-subtitle>{{item.fecha}}</ion-card-subtitle>
       </ion-card-header>
   
       <div class="contenido">
         <ion-card-content>
-          <ion-button fill="clear" id="{{item.id}}" (click)="Details(item.id)" style="text-transform: capitalize; text-decoration:underline; color: #2665AA;">Ver más</ion-button>
+          <ion-button fill="clear" id="{{item.id}}" (click)="verDetalles(item.id)">Ver más</ion-button>
         </ion-card-content>
       </div>
-
-        <!--
-        <ion-card-content>
-          <ion-accordion-group>
-            <ion-accordion value="{{item.id}}">
-              <ion-item slot="header" color="light">
-                <ion-label>Ver más</ion-label>
-              </ion-item>
-              <div class="ion-padding" slot="content" style="text-align: justify;">
-                {{item.contenido}}
-              </div>
-            </ion-accordion>
-          </ion-accordion-group>    
-  
-        </ion-card-content>-->
     </ion-card>
     <ion-content class="ion-padding" *ngFor="let item of noticiaDetalles">
       <ion-modal [isOpen]="isModalOpen" mode="ios">
@@ -51,12 +36,12 @@
             <ion-toolbar>
               <ion-title>Detalles</ion-title>
               <ion-buttons slot="end">
-                <ion-button (click)="setOpen(false)"><ion-icon name="close-outline" style="color: rgb(56, 128, 255);"></ion-icon></ion-button>
+                <ion-button (click)="setOpen(false)"><ion-icon name="close-outline"></ion-icon></ion-button>
               </ion-buttons>
             </ion-toolbar>
           </ion-header>
           <ion-content class="ion-padding">
-            <p style="text-align: justify;">
+            <p>
               {{item}}
             </p>
           </ion-content>

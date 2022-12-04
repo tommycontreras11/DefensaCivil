@@ -13,10 +13,10 @@ export class ServiciosPage implements OnInit {
   constructor(public http: HttpClient) { }
 
   ngOnInit() {
-    this.Services();
+    this.listarServicios();
   }
 
-  Services(){
+  listarServicios(){
     this.http.get("https://adamix.net/defensa_civil/def/servicios.php").subscribe((data:any) => {
       for(let i = 0; i < data.datos.length; i++){
         this.services.push({

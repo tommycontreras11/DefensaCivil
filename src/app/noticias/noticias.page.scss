@@ -1,5 +1,19 @@
+ion-card {
+    height: 360px;
+}
+
+ion-card-title {
+    text-align: justify; 
+    font-size: 20px;
+}
+
 .contenido {
     text-align: end;
+}
+
+.contenido ion-button {
+    text-transform: capitalize; 
+    text-decoration:underline; color: #2665AA;
 }
 
 ion-modal {
@@ -16,12 +30,15 @@ ion-modal ion-toolbar {
     --color: white;
 }
 
-ion-icon {
-    width: 30px;
-    height: 30px;
-}
-
 ion-button {
     --ion-color-primary: #2665AA;
     --ion-color-primary-rgb: 56, 128, 255;
+}
+
+ion-icon {
+    color: black;
+}
+
+p {
+    text-align: justify;
 }

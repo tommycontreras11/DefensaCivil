@@ -4,14 +4,14 @@ import { ToastController } from '@ionic/angular';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-recuperar-clave',
+  templateUrl: './recuperar-clave.page.html',
+  styleUrls: ['./recuperar-clave.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class RecuperarClavePage implements OnInit {
 
   cedula = "";
-  clave = "";
+  correo = "";
   data: Observable<any> | undefined;
   
   constructor(public http: HttpClient, private toastController: ToastController) { }
@@ -29,21 +29,21 @@ export class LoginPage implements OnInit {
     await toast.present();
   }
 
-  iniciarSesion(){
-    if(this.cedula != "" &&  this.clave != ""){
-      let url = "https://adamix.net/defensa_civil/def/iniciar_sesion.php";
+  recuperarClave(){
+    if(this.cedula != "" &&  this.correo != ""){
+      let url = "https://adamix.net/defensa_civil/def/recuperar_clave.php";
       let postData = new FormData();
 
       postData.append("cedula", this.cedula);
-      postData.append("clave", this.clave);
+      postData.append("correo", this.correo);
       this.data = this.http.post(url, postData);
 
       this.data.subscribe(res => {
         if(res["exito"] === false){
-          this.presentToast("Cédula o contraseña incorrectos");
+          this.presentToast(res["mensaje"]);
           console.log(res);
         }else{
-        this.presentToast("Se ha iniciado exitosamente");
+        this.presentToast(res["mensaje"]);
         console.log(res);
         }
       })
