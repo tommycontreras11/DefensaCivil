@@ -3,24 +3,6 @@
     --ion-safe-area-bottom: 22px;
 }
 
-ion-modal {
-    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-}
-  
-ion-modal::part(backdrop) {
-    background: rgba(209, 213, 219);
-    opacity: 1;
-}
-  
-ion-modal ion-toolbar {
-    --background: #2665AA;
-    --color: white;
-}
-
-ion-icon {
-    color: black;
-}
-
 ion-slides {
     height: 100%;
     text-align: justify;
@@ -46,10 +28,28 @@ h2 {
 }
 
 p {
-    padding: 0 40px;
+    padding: 0 30px;
     font-size: 14px;
-    line-height: 1.5;
     color: var(--ion-color-step-600, #60646b);
+    text-align: justify;
+}
+
+ion-modal {
+    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+  
+ion-modal::part(backdrop) {
+    background: rgba(209, 213, 219);
+    opacity: 1;
+}
+  
+ion-modal ion-toolbar {
+    --background: #2665AA;
+    --color: white;
+}
+
+ion-icon {
+    color: black;
 }
 
 .text-justify {

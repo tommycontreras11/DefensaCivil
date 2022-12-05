@@ -4,10 +4,23 @@ ion-card {
 }
 
 ion-card-title {
-    text-align: justify; 
+    text-align: center; 
     font-size: 20px;
+}
+
+ion-card-subtitle {
+    text-align: center;
+}
+
+ion-card-content {
+    font-size: 14px;
 }
 
 a {
     color: #2665AA;
+    margin-left: 3px;
+}
+
+ion-icon {
+    margin-bottom: -3px;
 }
