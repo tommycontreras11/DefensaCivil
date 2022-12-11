@@ -1,9 +1,51 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>reportar-situaciones</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Reportar Situación</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Reportar Situación</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
+<ion-content>
+  <div id="container">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Título</ion-label>
+        <ion-input clearInput value="X" type="text" placeholder="Título" [(ngModel)]="titulo"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-input clearInput value="X" type="text" placeholder="Descripción" [(ngModel)]="descripcion"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Foto</ion-label>
+        <ion-input clearInput value="X" type="text" placeholder="Foto" [(ngModel)]="foto"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Latitud</ion-label>
+        <ion-input clearInput value="X" type="text" placeholder="Latitud" [(ngModel)]="latitud"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Longitud</ion-label>
+        <ion-input clearInput value="X" type="text" placeholder="Longitud" [(ngModel)]="longitud"></ion-input>
+      </ion-item>
+      
+      <ion-item lines="none" class="item">
+        <ion-button (click)="reportarSituacion()">Reportar</ion-button>
+      </ion-item>
+      
+    </ion-list>
+  </div>
 </ion-content>

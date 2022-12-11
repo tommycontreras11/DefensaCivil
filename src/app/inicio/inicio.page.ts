@@ -11,11 +11,14 @@ export class InicioPage implements OnInit {
   constructor() {}
 
   ngOnInit() {
+    //localStorage.clear();
+    console.log(localStorage.getItem("token"))
+    /*
     if(this.token != ""){
       console.log("Hay algo " + this.token);
     }else{
       console.log("No hay algo");
-    }
+    }*/
   }
 
   isModalOpen = false;

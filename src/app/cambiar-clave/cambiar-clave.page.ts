@@ -4,17 +4,14 @@ import { ToastController } from '@ionic/angular';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-reportar-situaciones',
-  templateUrl: './reportar-situaciones.page.html',
-  styleUrls: ['./reportar-situaciones.page.scss'],
+  selector: 'app-cambiar-clave',
+  templateUrl: './cambiar-clave.page.html',
+  styleUrls: ['./cambiar-clave.page.scss'],
 })
-export class ReportarSituacionesPage implements OnInit {
+export class CambiarClavePage implements OnInit {
 
-  titulo = "";
-  descripcion = "";
-  foto = "";
-  latitud = "";
-  longitud = "";
+  claveAnterior = "";
+  claveNueva = "";
   data: Observable<any> | undefined;
 
   constructor(public http: HttpClient, private toastController: ToastController) { }
@@ -32,31 +29,30 @@ export class ReportarSituacionesPage implements OnInit {
     await toast.present();
   }
 
-  reportarSituacion(){
-    if(this.titulo != "" &&  this.descripcion != "" &&  this.foto != "" &&  this.latitud != "" &&  this.longitud != ""){
-      let url = "https://adamix.net/defensa_civil/def/nueva_situacion.php";
+  cambiarClave(){
+    if(this.claveAnterior != "" &&  this.claveNueva != ""){
+      let url = "https://adamix.net/defensa_civil/def/cambiar_clave.php";
       let postData = new FormData();
-
+      console.log(localStorage.getItem("token"));
       postData.append("token", localStorage.getItem("token")!);
-      postData.append("titulo", this.titulo);
-      postData.append("descripcion", this.descripcion);
-      postData.append("foto", this.foto);
-      postData.append("latitud", this.latitud);
-      postData.append("longitud", this.longitud);
-
+      postData.append("clave_anterior", this.claveAnterior);
+      postData.append("clave_nueva", this.claveNueva);
       this.data = this.http.post(url, postData);
 
       this.data.subscribe(res => {
         if(res["exito"] === false){
-          this.presentToast(res["exito"]);
+          this.presentToast(res["mensaje"]);
           console.log(res);
         }else{
-          this.presentToast("Se ha reportado exitosamente");
+        this.presentToast(res["mensaje"]);
+        console.log(res);
         }
       })
 
     }else{
       this.presentToast("Debes de llenar los campos");
     }
+    
   }
+
 }

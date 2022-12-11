@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cambiar Clave</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Cambiar Clave</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+  <div id="container">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Clave Anterior</ion-label>
+        <ion-input clearInput value="X" type="text" placeholder="Clave Anterior" [(ngModel)]="claveAnterior"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Clave Nueva</ion-label>
+        <ion-input clearInput value="X" type="text" placeholder="Clave Nueva" [(ngModel)]="claveNueva"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none" class="item">
+        <ion-button (click)="cambiarClave()">Cambiar</ion-button>
+      </ion-item>
+      
+    </ion-list>
+  </div>
+</ion-content>

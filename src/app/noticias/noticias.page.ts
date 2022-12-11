@@ -15,6 +15,8 @@ export class NoticiasPage implements OnInit {
   isModalOpen = false;
 
   ngOnInit() {
+    localStorage.clear();
+    console.log(localStorage.getItem("token"));
     this.listarNoticias();
   }
 

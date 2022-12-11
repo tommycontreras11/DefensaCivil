@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ToastController } from '@ionic/angular';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,8 +14,9 @@ export class LoginPage implements OnInit {
   cedula = "";
   clave = "";
   data: Observable<any> | undefined;
+  data2: any = [];
   
-  constructor(public http: HttpClient, private toastController: ToastController) { }
+  constructor(public http: HttpClient, private toastController: ToastController, public router: Router) { }
   
   ngOnInit() {
   }
@@ -43,10 +45,9 @@ export class LoginPage implements OnInit {
           this.presentToast("Cédula o contraseña incorrectos");
           console.log(res);
         }else{
-        this.presentToast("Se ha iniciado exitosamente");
-
-        localStorage.setItem("token", res["datos"]["token"]);
-
+          this.presentToast("Se ha iniciado exitosamente");
+          localStorage.setItem("token", res["datos"]["token"]);
+          console.log(localStorage.getItem("token"))
         }
       })
 
