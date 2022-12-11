@@ -15,9 +15,10 @@ export class AppComponent implements OnInit {
     if(localStorage.getItem("token") != null){
       this.appPages = [
         { title: 'Noticias', url: '/noticias', icon: 'newspaper' },
-        { title: 'Reportar situaciones', url: '/reportar-situaciones', icon: 'videocam' },
-        { title: 'Mis situaciones', url: '/mis-situaciones', icon: 'document-text' },
-        { title: 'Mapa de situaciones', url: '/mapa-situaciones', icon: 'enter' },
+        { title: 'Reportar situaciones', url: '/reportar-situaciones', icon: 'receipt' },
+        { title: 'Mis situaciones', url: '/mis-situaciones', icon: 'clipboard' },
+        { title: 'Mapa de situaciones', url: '/mapa-situaciones', icon: 'earth' },
+        { title: 'Recuperar Clave', url: '/recuperar-clave', icon: 'repeat' },
         { title: 'Cambiar Clave', url: '/cambiar-clave', icon: 'key' },
       ];
     }else{
@@ -31,8 +32,8 @@ export class AppComponent implements OnInit {
         { title: 'Inicio de Sesión', url: '/login', icon: 'enter' },
         { title: 'Registrarse', url: '/registrarse', icon: 'person-add' },
         { title: 'Acerca de', url: '/acerca-de', icon: 'bulb' },
-        { title: 'Medidas', url: '/medidas-preventivas', icon: 'bulb' },
-        { title: 'Miembros', url: '/miembros', icon: 'bulb' },
+        { title: 'Medidas', url: '/medidas-preventivas', icon: 'warning' },
+        { title: 'Miembros', url: '/miembros', icon: 'people-circle' },
       ];
     }  
   }

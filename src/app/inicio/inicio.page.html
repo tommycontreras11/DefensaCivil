@@ -40,7 +40,7 @@
       <ion-slide>
         <img src="assets/casco.png" />
         <h2>¿Quieres ver todas las acciones de la Defensa Cívil?</h2>
-        <ion-button fill="clear" (click)="setOpen(true)">Ver más <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+        <ion-button fill="clear" (click)="setOpen(true)">Ver más <ion-icon id="icon1" slot="end" name="arrow-forward"></ion-icon></ion-button>
       </ion-slide>
     </ion-slides>
     
@@ -49,8 +49,8 @@
           <ion-header>
             <ion-toolbar>
               <ion-title>Acciones</ion-title>
-              <ion-buttons slot="end">
-                <ion-button (click)="setOpen(false)"><ion-icon slot="start" name="close-outline"></ion-icon></ion-button>
+              <ion-buttons slot="start">
+                <ion-button (click)="setOpen(false)"><ion-icon id="icon2" name="arrow-back-outline"></ion-icon></ion-button>
               </ion-buttons>
             </ion-toolbar>
           </ion-header>

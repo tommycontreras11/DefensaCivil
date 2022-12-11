@@ -40,8 +40,7 @@ export class RecuperarClavePage implements OnInit {
 
       this.data.subscribe(res => {
         if(res["exito"] === false){
-          this.presentToast(res["mensaje"]);
-          console.log(res);
+          this.presentToast("Ha ocurrido un error");
         }else{
         this.presentToast(res["mensaje"]);
         console.log(res);

@@ -48,8 +48,14 @@ ion-modal ion-toolbar {
     --color: white;
 }
 
-ion-icon {
-    color: black;
+#icon1 {
+    color: #ff7000;
+}
+
+#icon2 {
+    width: 30px;
+    height: 30px;
+    color: white;
 }
 
 .text-justify {

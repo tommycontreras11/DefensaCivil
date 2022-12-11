@@ -16,6 +16,41 @@
 
 <ion-content>
   <div id="container">
-    
+    <ion-item *ngFor="let item of situaciones" button detail="true" (click)="verDetalles(item.id)" >
+      <ion-thumbnail slot="start">
+        <img alt="Silhouette of mountains" src="{{item.foto}}" />
+      </ion-thumbnail>
+      <ion-label>
+        <h3>{{item.titulo}}</h3>
+      </ion-label>
+    </ion-item>
+    <ion-content class="ion-padding" *ngFor="let item of situacionDetalles">
+      <ion-modal [isOpen]="isModalOpen" mode="ios">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-title>Detalles</ion-title>
+              <ion-buttons slot="start">
+                <ion-button (click)="setOpen(false)"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+            <ion-card>
+              <img alt="Silhouette of mountains" src="{{item.foto}}" />
+              <ion-card-header>
+                <ion-card-title>{{item.titulo}}</ion-card-title>
+              </ion-card-header>
+          
+              <div class="contenido">
+                <ion-card-content>
+                  {{item.descripcion}}
+                </ion-card-content>
+              </div>
+            </ion-card>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+    </ion-content>
   </div>
 </ion-content>

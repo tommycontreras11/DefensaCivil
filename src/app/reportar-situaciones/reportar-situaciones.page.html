@@ -27,9 +27,8 @@
         <ion-input clearInput value="X" type="text" placeholder="Descripción" [(ngModel)]="descripcion"></ion-input>
       </ion-item>
 
-      <ion-item>
-        <ion-label position="floating">Foto</ion-label>
-        <ion-input clearInput value="X" type="text" placeholder="Foto" [(ngModel)]="foto"></ion-input>
+      <ion-item lines="none">
+        <ion-button style="width: 100px; height: 40px; font-size: 14px; text-transform: none;" (click)="takePicture()">Tomar foto</ion-button>
       </ion-item>
 
       <ion-item>
