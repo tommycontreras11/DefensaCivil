@@ -54,6 +54,14 @@ const routes: Routes = [
   {
     path: 'acerca-de',
     loadChildren: () => import('./acerca-de/acerca-de.module').then( m => m.AcercaDePageModule)
+  },
+  {
+    path: 'reportar-situaciones',
+    loadChildren: () => import('./reportar-situaciones/reportar-situaciones.module').then( m => m.ReportarSituacionesPageModule)
+  },
+  {
+    path: 'mis-situaciones',
+    loadChildren: () => import('./mis-situaciones/mis-situaciones.module').then( m => m.MisSituacionesPageModule)
   }
 ];
 

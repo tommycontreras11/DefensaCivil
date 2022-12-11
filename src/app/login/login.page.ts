@@ -8,14 +8,14 @@ import { Observable } from 'rxjs';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
 
+export class LoginPage implements OnInit {
   cedula = "";
   clave = "";
   data: Observable<any> | undefined;
   
   constructor(public http: HttpClient, private toastController: ToastController) { }
-
+  
   ngOnInit() {
   }
 
@@ -44,7 +44,9 @@ export class LoginPage implements OnInit {
           console.log(res);
         }else{
         this.presentToast("Se ha iniciado exitosamente");
-        console.log(res);
+
+        localStorage.setItem("token", res["datos"]["token"]);
+
         }
       })
 

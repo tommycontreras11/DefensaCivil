@@ -5,11 +5,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './inicio.page.html',
   styleUrls: ['./inicio.page.scss'],
 })
-export class InicioPage implements OnInit {
 
-  constructor() { }
+export class InicioPage implements OnInit {
+  token = localStorage.getItem("token");
+  constructor() {}
 
   ngOnInit() {
+    if(this.token != ""){
+      console.log("Hay algo " + this.token);
+    }else{
+      console.log("No hay algo");
+    }
   }
 
   isModalOpen = false;
