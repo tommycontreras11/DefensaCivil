@@ -10,11 +10,11 @@ declare var google: any;
 let coordInfo: CoordInfo;
 
 @Component({
-  selector: 'app-mapa-situaciones',
-  templateUrl: './mapa-situaciones.page.html',
-  styleUrls: ['./mapa-situaciones.page.scss'],
+  selector: 'app-mapa-albergues',
+  templateUrl: './mapa-albergues.page.html',
+  styleUrls: ['./mapa-albergues.page.scss'],
 })
-export class MapaSituacionesPage implements OnInit {
+export class MapaAlberguesPage implements OnInit {
 
   map = null;
   data: Observable<any> | undefined;
@@ -124,5 +124,4 @@ export class MapaSituacionesPage implements OnInit {
 
     })
   }
-
 }

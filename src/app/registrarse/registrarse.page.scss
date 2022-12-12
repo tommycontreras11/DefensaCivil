@@ -5,8 +5,18 @@ ion-item {
 
 ion-button{
     --ion-color-primary: #2665AA;
-    width: 140px;
+    width: 100%;
     height: 40px;
     font-size: 14px;
     text-transform: none;
+    border-radius: 6px;
+}
+
+.contenido {
+    text-align: center;
+}
+
+a {
+    font-size: 14px;
+    --ion-color-primary: #2665AA;
 }

@@ -24,13 +24,12 @@
 
       <ion-item>
         <ion-label position="floating">Contraseña</ion-label>
-        <ion-input clearInput value="X" type="text" placeholder="Contraseña" [(ngModel)]="clave"></ion-input>
+        <ion-input clearInput value="X" type="password" placeholder="Contraseña" [(ngModel)]="clave"></ion-input>
       </ion-item>
-
-      <ion-item lines="none">
-        <ion-button (click)="iniciarSesion()">Loguearse</ion-button>
-      </ion-item>
-
+      <div class="contenido">
+        <ion-button fill="outline" (click)="iniciarSesion()">Loguearse</ion-button>
+        <a href="/recuperar-clave">¿Deseas recuperar la contraseña?</a>
+      </div>
     </ion-list>
   </div>
 </ion-content>

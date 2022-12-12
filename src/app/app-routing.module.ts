@@ -82,6 +82,19 @@ if(localStorage.getItem("token") != null){
       path: 'miembros',
       loadChildren: () => import('./miembros/miembros.module').then( m => m.MiembrosPageModule)
     },
+    {
+      path: 'mapa-mis-situaciones',
+      loadChildren: () => import('./mapa-mis-situaciones/mapa-mis-situaciones.module').then( m => m.MapaMisSituacionesPageModule)
+    },
+    {
+      path: 'mapa-albergues',
+      loadChildren: () => import('./mapa-albergues/mapa-albergues.module').then( m => m.MapaAlberguesPageModule)
+    },
+    {
+      path: 'mapa-todos-albergues',
+      loadChildren: () => import('./mapa-todos-albergues/mapa-todos-albergues.module').then( m => m.MapaTodosAlberguesPageModule)
+    },
+
   ];
 }else{
   routes = [
@@ -161,6 +174,18 @@ if(localStorage.getItem("token") != null){
     {
       path: 'miembros',
       loadChildren: () => import('./miembros/miembros.module').then( m => m.MiembrosPageModule)
+    },
+    {
+      path: 'mapa-mis-situaciones',
+      loadChildren: () => import('./mapa-mis-situaciones/mapa-mis-situaciones.module').then( m => m.MapaMisSituacionesPageModule)
+    },
+    {
+      path: 'mapa-albergues',
+      loadChildren: () => import('./mapa-albergues/mapa-albergues.module').then( m => m.MapaAlberguesPageModule)
+    },
+    {
+      path: 'mapa-todos-albergues',
+      loadChildren: () => import('./mapa-todos-albergues/mapa-todos-albergues.module').then( m => m.MapaTodosAlberguesPageModule)
     },
   ];
 }
