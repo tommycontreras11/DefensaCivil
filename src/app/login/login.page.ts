@@ -47,7 +47,7 @@ export class LoginPage implements OnInit {
         }else{
           this.presentToast("Se ha iniciado exitosamente");
           localStorage.setItem("token", res["datos"]["token"]);
-          console.log(localStorage.getItem("token"))
+          console.log(localStorage.getItem("token"));
         }
       })
 

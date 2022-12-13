@@ -94,6 +94,10 @@ if(localStorage.getItem("token") != null){
       path: 'mapa-todos-albergues',
       loadChildren: () => import('./mapa-todos-albergues/mapa-todos-albergues.module').then( m => m.MapaTodosAlberguesPageModule)
     },
+    {
+      path: 'cerrar-sesion',
+      loadChildren: () => import('./cerrar-sesion/cerrar-sesion.module').then( m => m.CerrarSesionPageModule)
+    },
 
   ];
 }else{
@@ -186,6 +190,10 @@ if(localStorage.getItem("token") != null){
     {
       path: 'mapa-todos-albergues',
       loadChildren: () => import('./mapa-todos-albergues/mapa-todos-albergues.module').then( m => m.MapaTodosAlberguesPageModule)
+    },
+    {
+      path: 'cerrar-sesion',
+      loadChildren: () => import('./cerrar-sesion/cerrar-sesion.module').then( m => m.CerrarSesionPageModule)
     },
   ];
 }

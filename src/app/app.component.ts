@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
         { title: 'Mapa de situaciones', url: '/mapa-mis-situaciones', icon: 'earth' },
         { title: 'Recuperar Clave', url: '/recuperar-clave', icon: 'repeat' },
         { title: 'Cambiar Clave', url: '/cambiar-clave', icon: 'key' },
+        { title: 'Cerrar Sesión', url: '/cerrar-sesion', icon: 'exit' },
       ];
     }else{
       this.appPages = [
